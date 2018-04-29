@@ -1,0 +1,79 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*设置字体以用于rem计算大小 */
+html {
+  font-size: 10px;
+}
+
+/*设置display为flex,使主题内容居中*/
+body {
+  height: 40rem;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  justify-content:center;
+  align-items:center;
+  -webkit-align-items:center;
+}
+
+main {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  width:100%;
+  justify-content: space-around;
+}
+
+/*设置盒子属性*/
+div {
+  width: 8rem;
+  height: 8rem;
+  font-size:2rem;
+  border: 0.1rem solid #cccccc;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:#F2F2F2;
+}
+
+/*使box1倾斜30度 */
+div:nth-child(2) {
+  transform: skew(30deg,0);
+  -webkit-transform: skew(30deg,0);
+  -ms-transform: skew(30deg, 0);
+}
+
+/*使box2缩放2倍*/
+div:nth-child(3) {
+  transform: scale(0.5,1);
+  -webkit-transform: scale(0.5,1);
+  -ms-transform: scale(0.5,1);
+}
+
+/*使box3旋转45度*/
+div:nth-child(4) {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+/*使box4x坐标x偏移10px,坐标y偏移20px*/
+div:nth-child(5) {
+  transform: translate(1rem,2rem);
+  -webkit-transform: translate(1rem,2rem);
+  -ms-transform: translate(1rem,2rem);
+}
+
+/*综合上述条件*/
+div:nth-child(6) {
+  transform: skew(30deg,0) scale(0.5,1) 
+          rotate(45deg) translate(1rem,2rem);
+  
+  -webkit-transform: skew(30deg,0) scale(0.5,1) 
+          rotate(45deg) translate(1rem, 2rem);
+  
+  -ms-transform: skew(30deg,0) scale(0.5,1) 
+          rotate(45deg) translate(1rem, 2rem);
+}
