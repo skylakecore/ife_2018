@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  border:0;
+  margin:0;
+}
+
+html {
+  font-size: 10px;
+}
+
+
+body {
+  height: 80rem;
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  perspective: 70rem;
+  -moz-perspective: 70rem;
+  -webkit-perspective: 70rem;
+}
+
+main div {
+  transition: .6s ease-in-out;
+  -moz-transition: .6s ease-in-out;
+  -webkit-transition: .6s ease-in-out;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#front {
+  position: relative;
+  top:17.5rem;
+  z-index: 1;
+  transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+}
+
+#back {
+  position: relative;
+  bottom:17.5rem;
+  z-index: 0;
+  transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+main:hover #front {
+  transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+}
+
+main:hover #back {
+  transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+}
