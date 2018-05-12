@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    border: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: rgba(0,0,0,0.2);
+}
+
+#container {
+    width: 100%;
+    height: 92rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#show {
+    width:150rem;
+    height:90rem;
+    background-image: url(./mp40.jpg);
+    background-size: 150rem 100rem;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 2rem 2rem rgba(255,255,255,1) inset;
+    display: flex;
+    align-items: flex-end;
+}
+
+#thumbnail {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#thumbnail div>img {
+    width: 23rem;
+    height: 16rem;
+    /*filter: sepia(0.6);*/
+    filter: grayscale(0.8);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#thumbnail div:hover img{
+    opacity: 0.9;
+    filter: grayscale(0.4);
+}
+
+@keyframes moveX {
+    0% {background-position: -50rem 0;}
+    100% {background-position: 0 0;}
+}
+
+@keyframes moveY {
+    0% {background-position: 0 35rem;}
+    100% {background-position: 0 0;}
+}
+
+@keyframes enlarge1 {
+    0% {
+        background-size: 10%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes enlarge2 {
+    0% {background-size: 20%;}
+    100% {background-size: 100%;}
+}
+
+@keyframes rotateAndEnlarge {
+    0% {
+        transform: rotate(-360deg);
+        background-size: 10%;
+    }
+
+    100% {
+        transform: rotate(0);
+        background-size: 100%;
+    }
+}
